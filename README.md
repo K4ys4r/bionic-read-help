@@ -61,3 +61,5 @@ Word with length of :
 - 2: will be half highlighted (algorithm value is 0.5)
 - 3: will be totally highlighted (algorithm value is 1)
 - 4 and above: will be half highlighted (algorithm value is 0.5)
+
+For more information and to experiment bionic reding with your own text [go here](https://k4ys4r.github.io/bionic-read-help/).

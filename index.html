@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bionic Read Help</title>
+    <script type="module" src="./lib/bionic-read-help.js"></script>
+    <style>
+      body {
+        border: 2px solid #c0c3d1;
+        padding: 1em;
+        background: #daecf0;
+        border-radius: 1em;
+        box-shadow: 0px 0px 11px #8c91ce;
+      }
+      .justify {
+        text-align: justify;
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+      .code-zone {
+        margin: 1em 0.25em;
+        color: #cccccc;
+        background-color: #1f1f1f;
+        font-family: Consolas, "Courier New", monospace;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        white-space: pre-wrap;
+        border-radius: 10px;
+      }
+
+      .bionic-demo {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      .user-text,
+      .bionic-text {
+        padding: 10px;
+        display: flex;
+      }
+      .user-text textarea,
+      .bionic-text p {
+        width: 100%;
+        min-height: 100px;
+        resize: none;
+      }
+      .convert-btn {
+        display: flex;
+        justify-content: center;
+      }
+      .convert-btn button {
+        height: 2rem;
+      }
+      #bionic-read-help-text {
+        overflow: auto;
+        overflow-x: hidden;
+        padding: 0.5em 0.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <section>
+        <div class="justify">
+          <h1>What is Bionic Reading?</h1>
+          <p>
+            Bionic reading is a new method for reading better, faster and more
+            focused.<br />
+            It was developed by
+            <a href="https://www.linkedin.com/in/renato-casutt" target="_blank"
+              >Renato Casutt</a
+            >
+            a typographic designer from Switzerland. <br />
+            It aims to highlight text when an artificial fixation points are
+            used to guid eyes. <br />
+            The Bionic Reading combines fixation points and opacity to change
+            the visual surface of the content. <br />
+            It is very helpful for people with dyslexia while their reading and
+            learning process.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h1>Bionic Read Help Web Component</h1>
+        <div>
+          <p>
+            It is a web component written in pure javascript and without any
+            dependencies. <br />
+            It can be used to extend the HTML paragraph element like below:
+          </p>
+          <code>
+            <div class="code-zone">
+              <span style="color: #808080">&lt;</span
+              ><span style="color: #569cd6">p</span
+              ><span style="color: #cccccc"> </span
+              ><span style="color: #9cdcfe">is</span
+              ><span style="color: #cccccc">=</span
+              ><span style="color: #ce9178">"bionic-read-help"</span
+              ><span style="color: #808080">&gt;</span
+              ><span style="color: #cccccc">...</span
+              ><span style="color: #808080">&lt;/</span
+              ><span style="color: #569cd6">p</span
+              ><span style="color: #808080">&gt;</span>
+            </div>
+          </code>
+
+          <p>
+            There is four additional attributes that can be used to adjust the
+            opacity, the algorithm, the text color and the bionic mode type:
+          </p>
+          <ul>
+            <li>
+              brh-opacity : defines the opacity value which can be between 0 and
+              1 (default value is <code>0.75</code>).
+            </li>
+            <li>
+              brh-color-text : defines the text color, it is in HEX format
+              (default value is <code>#000</code>).
+            </li>
+            <li>
+              brh-type : defines the type mode, static or interactive (default
+              value is <code>static</code> ).
+            </li>
+            <li>
+              brh-algorithm : defines the algorithm to highlight text (default
+              value is <code>[-1, 0.25, 0.25, 0.35, 0.5, 0.65]</code>).
+            </li>
+          </ul>
+
+          <p>These attributes can be used as below:</p>
+          <code>
+            <div class="code-zone">
+              <span style="color: #808080">&lt;</span
+              ><span style="color: #569cd6">p</span>
+              <span style="color: #9cdcfe">is</span
+              ><span style="color: #cccccc">=</span
+              ><span style="color: #ce9178">"bionic-read-help"</span>
+              <span style="color: #9cdcfe">brh-opacity</span
+              ><span style="color: #cccccc">=</span
+              ><span style="color: #ce9178">"0.75"</span>
+              <span style="color: #9cdcfe">brh-type</span
+              ><span style="color: #cccccc">=</span
+              ><span style="color: #ce9178">"interactive"</span>
+              <span style="color: #9cdcfe">brh-algorithm</span
+              ><span style="color: #cccccc">=</span
+              ><span style="color: #ce9178">"-1 0.5 0.5 0.75 0.65"</span>
+              <span style="color: #9cdcfe">brh-text-color</span
+              ><span style="color: #cccccc">=</span
+              ><span style="color: #ce9178">"#000"</span>
+              <span style="color: #808080">&gt;</span>
+              <span style="color: #cccccc">...</span>
+              <span style="color: #cccccc">... ...</span>
+              <span style="color: #cccccc">... ... ...</span>
+              <span style="color: #808080">&lt;/</span
+              ><span style="color: #569cd6">p</span
+              ><span style="color: #808080">&gt;</span>
+            </div>
+          </code>
+          <p>
+            The value of algorithm is positive numbers separated by white-space.
+            Each value will be used to set the level of each word highlighting
+            respecting to its length. the value of -1 is used to ignore this
+            process. <br />
+            Here is an example:
+          </p>
+          <code>
+            <div class="code-zone">
+              <span style="color: #808080">&lt;</span
+              ><span style="color: #569cd6">p</span
+              ><span style="color: #cccccc"> </span
+              ><span style="color: #9cdcfe">is</span
+              ><span style="color: #cccccc">=</span
+              ><span style="color: #ce9178">"bionic-read-help"</span
+              ><span style="color: #cccccc"> </span
+              ><span style="color: #9cdcfe">brh-algorithm</span
+              ><span style="color: #cccccc">=</span
+              ><span style="color: #ce9178">"-1 0.5 1 0.5"</span
+              ><span style="color: #808080">&gt;</span>
+              <span style="color: #cccccc"
+                >Bionic read help web component is awesome</span
+              >
+              <span style="color: #808080">&lt;/</span
+              ><span style="color: #569cd6">p</span
+              ><span style="color: #808080">&gt;</span>
+            </div>
+          </code>
+
+          <h5>That results :</h5>
+          <div
+            style="
+              text-align: center;
+              border-radius: 10px;
+              border: 1px solid black;
+            "
+          >
+            <p is="bionic-read-help" brh-algorithm="-1 0.5 1 0.5">
+              Bionic read help web component is awesome
+            </p>
+          </div>
+          <p>
+            The result shows that the values of algorithm define the highlighted
+            word based on their length. <br />
+            Word with length of :
+          </p>
+          <ul>
+            <li>1: will be ignored (algorithm value is -1)</li>
+            <li>2: will be half highlighted (algorithm value is 0.5)</li>
+            <li>3: will be totally highlighted (algorithm value is 1)</li>
+            <li>
+              4 and above: will be half highlighted (algorithm value is 0.5)
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h3>More example</h3>
+
+        <div>
+          <h4>Here you can experience the Interactive mode</h4>
+          <p>
+            In this mode a toolbar is added to the paragraph to adjust opacity,
+            color and algorithm.
+          </p>
+          <p
+            is="bionic-read-help"
+            brh-opacity="0.75"
+            brh-type="interactive"
+            brh-algorithm=" -1 0.5 0.5 0.75 0.65"
+            brh-text-color="#000"
+          >
+            Web components are a set of technologies that allow you to create
+            reusable custom elements with their own functionality and
+            appearance, encapsulated from the rest of the code and that can be
+            used in web applications. Web components are based on four
+            standards: custom elements, shadow DOM, ES modules, and HTML
+            templates. Web components are supported by all modern browsers and
+            can work with any framework or library that uses HTML. Web
+            components can help you create more efficient and maintainable web
+            projects.
+          </p>
+        </div>
+        <div>
+          <h4>Static mode with blue text</h4>
+          <p
+            is="bionic-read-help"
+            brh-algorithm="-1 0.5 0.5 0.75 0.65"
+            brh-text-color="#0000ff"
+            class="justify"
+          >
+            Web components are a set of technologies that allow you to create
+            reusable custom elements with their own functionality and
+            appearance, encapsulated from the rest of the code and that can be
+            used in web applications. Web components are based on four
+            standards: custom elements, shadow DOM, ES modules, and HTML
+            templates. Web components are supported by all modern browsers and
+            can work with any framework or library that uses HTML. Web
+            components can help you create more efficient and maintainable web
+            projects.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h3>Here you can experiment the bionic reading with your own text</h3>
+          <div class="bionic-demo">
+            <div class="user-text">
+              <textarea
+                name="text-to-bionic"
+                id="text-to-bionic"
+                placeholder="write or paste you text here"
+              ></textarea>
+            </div>
+            <div class="convert-btn">
+              <button id="convert-btn" onclick="convertToBionic()" disabled>
+                Apply Bionic Reading Method
+              </button>
+            </div>
+            <div class="bionic-text" id="bionic-text" style="display: none">
+              <p
+                is="bionic-read-help"
+                brh-type="interactive"
+                id="bionic-demo"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </body>
+  <script lang="javascript">
+    let bionicDemo= document.getElementById('bionic-demo')
+    let userText = document.getElementById('text-to-bionic')
+    let bionicText = document.getElementById('bionic-text')
+    let convertBtn = document.getElementById('convert-btn')
+    userText.oninput=()=>convertBtn.removeAttribute('disabled');
+    function convertToBionic() {
+      let txt = userText.value;
+      bionicDemo.content = txt.trim().split(/\s/);
+      bionicDemo.updateElement();
+      bionicText.style.display='block';
+    }
+  </script>
+</html>

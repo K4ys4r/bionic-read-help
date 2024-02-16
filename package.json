@@ -1,0 +1,28 @@
+{
+  "name": "bionic-read-help",
+  "version": "1.0.0",
+  "description": "An artificial method helps to read better and more faster",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/bionic-read-help.umd.cjs",
+  "module": "./dist/bionic-read-help.js",
+  "exports": {
+    ".": {
+      "import": "./dist/bionic-read-help.js",
+      "require": "./dist/bionic-read-help.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Hilal Balout",
+  "email": "hilal_balout@hotmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^4.3.5"
+  }
+}

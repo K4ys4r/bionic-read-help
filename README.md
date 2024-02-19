@@ -63,3 +63,22 @@ Word with length of :
 - 4 and above: will be half highlighted (algorithm value is 0.5)
 
 For more information and to experiment bionic reding with your own text [go here](https://k4ys4r.github.io/bionic-read-help/).
+
+## For Developper
+
+Get a copy of the project.
+
+```bash
+# go to the project folder
+# with yarn
+yarn
+yarn run dev
+
+# with npm
+npm i
+npm run dev
+```
+
+### Browser compatibility
+
+It is compatible with all browser except Safari sinc the html attribute _is_ is not supported more information [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/is#browser_compatibility).

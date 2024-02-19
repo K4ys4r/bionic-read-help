@@ -95,15 +95,11 @@
           <code>
             <div class="code-zone">
               <span style="color: #808080">&lt;</span
-              ><span style="color: #569cd6">p</span
-              ><span style="color: #cccccc"> </span
-              ><span style="color: #9cdcfe">is</span
-              ><span style="color: #cccccc">=</span
-              ><span style="color: #ce9178">"bionic-read-help"</span
+              ><span style="color: #569cd6">wc-bionic-read-help</span
               ><span style="color: #808080">&gt;</span
-              ><span style="color: #cccccc">...</span
+              ><span style="color: #cccccc"> ... </span
               ><span style="color: #808080">&lt;/</span
-              ><span style="color: #569cd6">p</span
+              ><span style="color: #569cd6">wc-bionic-read-help</span
               ><span style="color: #808080">&gt;</span>
             </div>
           </code>
@@ -135,10 +131,7 @@
           <code>
             <div class="code-zone">
               <span style="color: #808080">&lt;</span
-              ><span style="color: #569cd6">p</span>
-              <span style="color: #9cdcfe">is</span
-              ><span style="color: #cccccc">=</span
-              ><span style="color: #ce9178">"bionic-read-help"</span>
+              ><span style="color: #569cd6">wc-bionic-read-help</span>
               <span style="color: #9cdcfe">brh-opacity</span
               ><span style="color: #cccccc">=</span
               ><span style="color: #ce9178">"0.75"</span>
@@ -156,7 +149,7 @@
               <span style="color: #cccccc">... ...</span>
               <span style="color: #cccccc">... ... ...</span>
               <span style="color: #808080">&lt;/</span
-              ><span style="color: #569cd6">p</span
+              ><span style="color: #569cd6">wc-bionic-read-help</span
               ><span style="color: #808080">&gt;</span>
             </div>
           </code>
@@ -170,12 +163,10 @@
           <code>
             <div class="code-zone">
               <span style="color: #808080">&lt;</span
-              ><span style="color: #569cd6">p</span
-              ><span style="color: #cccccc"> </span
-              ><span style="color: #9cdcfe">is</span
-              ><span style="color: #cccccc">=</span
-              ><span style="color: #ce9178">"bionic-read-help"</span
-              ><span style="color: #cccccc"> </span
+              ><span style="color: #569cd6">wc-bionic-read-help</span> ><span
+                style="color: #cccccc"
+              >
+              </span
               ><span style="color: #9cdcfe">brh-algorithm</span
               ><span style="color: #cccccc">=</span
               ><span style="color: #ce9178">"-1 0.5 1 0.5"</span
@@ -184,7 +175,7 @@
                 >Bionic read help web component is awesome</span
               >
               <span style="color: #808080">&lt;/</span
-              ><span style="color: #569cd6">p</span
+              ><span style="color: #569cd6">wc-bionic-read-help</span
               ><span style="color: #808080">&gt;</span>
             </div>
           </code>
@@ -195,11 +186,15 @@
               text-align: center;
               border-radius: 10px;
               border: 1px solid black;
+              min-height: 2rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             "
           >
-            <p is="bionic-read-help" brh-algorithm="-1 0.5 1 0.5">
+            <wc-bionic-read-help brh-algorithm="-1 0.5 1 0.5">
               Bionic read help web component is awesome
-            </p>
+            </wc-bionic-read-help>
           </div>
           <p>
             The result shows that the values of algorithm define the highlighted
@@ -225,8 +220,7 @@
             In this mode a toolbar is added to the paragraph to adjust opacity,
             color and algorithm.
           </p>
-          <p
-            is="bionic-read-help"
+          <wc-bionic-read-help
             brh-opacity="0.75"
             brh-type="interactive"
             brh-algorithm=" -1 0.5 0.5 0.75 0.65"
@@ -241,12 +235,11 @@
             can work with any framework or library that uses HTML. Web
             components can help you create more efficient and maintainable web
             projects.
-          </p>
+          </wc-bionic-read-help>
         </div>
         <div>
           <h4>Static mode with blue text</h4>
-          <p
-            is="bionic-read-help"
+          <wc-bionic-read-help
             brh-algorithm="-1 0.5 0.5 0.75 0.65"
             brh-text-color="#0000ff"
             class="justify"
@@ -260,7 +253,7 @@
             can work with any framework or library that uses HTML. Web
             components can help you create more efficient and maintainable web
             projects.
-          </p>
+          </wc-bionic-read-help>
         </div>
       </section>
       <section>
@@ -280,11 +273,10 @@
               </button>
             </div>
             <div class="bionic-text" id="bionic-text" style="display: none">
-              <p
-                is="bionic-read-help"
+              <wc-bionic-read-help
                 brh-type="interactive"
                 id="bionic-demo"
-              ></p>
+              ></wc-bionic-read-help>
             </div>
           </div>
         </div>

@@ -11,10 +11,10 @@ learning process.
 
 It is a web component written in pure javascript and without any
 dependencies. <br />
-It can be used to extend the HTML paragraph element like below:
+It is extended from HTML element. It can be used like below:
 
 ```html
-<p is="bionic-read-help">...</p>
+<wc-bionic-read-help>...</wc-bionic-read-help>
 ```
 
 There is four additional attributes that can be used to adjust the opacity, the algorithm, the text color and the bionic mode type:
@@ -27,26 +27,24 @@ There is four additional attributes that can be used to adjust the opacity, the 
 These attributes can be used as below:
 
 ```html
-<p
-  is="bionic-read-help"
+<wc-bionic-read-help
   brh-opacity="0.75"
   brh-type="interactive"
   brh-algorithm="-1 0.5 0.5 0.75 0.65"
   brh-text-color="#000"
 >
   ...
-</p>
+</wc-bionic-read-help>
 ```
 
 The value of algorithm is positive numbers separated by white-space. Each value will be used to set the level of each word highlighting respecting to its length. the value of -1 is used to ignore this process.
 Here is an example:
 
-````html
-<p is="bionic-read-help" brh-algorithm="-1 0.5 1 0.5">
+```html
+<wc-bionic-read-help brh-algorithm="-1 0.5 1 0.5">
   Bionic read help web component is awesome
-</p>
+</wc-bionic-read-help>
 ```
-````
 
 That results:
 
@@ -78,7 +76,3 @@ yarn run dev
 npm i
 npm run dev
 ```
-
-### Browser compatibility
-
-It is compatible with all browser except Safari sinc the html attribute _is_ is not supported more information [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/is#browser_compatibility).

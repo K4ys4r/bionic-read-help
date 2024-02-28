@@ -1,0 +1,8 @@
+/node_modules
+/lib
+/tests
+tsconfig.json
+vite.config.js
+yarn.lock
+package-lock.json
+index.html

@@ -1,28 +1,52 @@
 {
-  "name": "bionic-read-help",
+  "name": "@k4ys4r/wc-bionic-read-help",
   "version": "1.0.0",
   "description": "An artificial method helps to read better and more faster",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./dist/bionic-read-help.umd.cjs",
   "module": "./dist/bionic-read-help.js",
+  "types": "./types/bionic-read-help.d.ts",
   "exports": {
     ".": {
       "import": "./dist/bionic-read-help.js",
       "require": "./dist/bionic-read-help.umd.cjs"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/K4ys4r/bionic-read-help.git"
+  },
+  "bugs": {
+    "url": "https://github.com/k4ys4r/bionic-read-help/issues"
+  },
+  "homepage": "https://k4ys4r.github.io/bionic-read-help/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "generate-dts": "tsc",
+    "test": "vitest",
+    "clean": "rm -rf dist node_modules types"
   },
-  "author": "Hilal Balout",
-  "email": "hilal_balout@hotmail.com",
-  "license": "ISC",
+  "author": "Hilal Balout <k4ys4r.webdev@hotmail.com>",
+  "license": "MIT",
   "devDependencies": {
-    "vite": "^4.3.5"
-  }
+    "jsdom": "^24.0.0",
+    "typescript": "^5.3.3",
+    "vite": "^4.3.5",
+    "vitest": "^1.3.1"
+  },
+  "keywords": [
+    "web components",
+    "wc",
+    "custom-elements",
+    "bionic reading",
+    "javascript"
+  ]
 }

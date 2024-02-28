@@ -1,0 +1,14 @@
+export async function createBionicHelpWC({
+  message = "test",
+  type = "static",
+}) {
+  const wc = document.createElement("wc-bionic-read-help");
+  wc.setAttribute("brh-type", type);
+  wc.textContent = message;
+  document.body.appendChild(wc);
+  return wc;
+}
+
+export async function delay(t) {
+  return new Promise((resolve) => setTimeout(resolve, t));
+}

@@ -5,6 +5,9 @@ dependencies. <br />
 It helps to read better, faster and more focused based on the **Bionic Reading method**
 
 [![npm version](https://badgen.net/npm/v/@k4ys4r/wc-bionic-read-help)](https://www.npmjs.com/package/@k4ys4r/wc-bionic-read-help)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/@k4ys4r/wc-bionic-read-help)
+
+
 
 ## What is Bionic Reading?
 

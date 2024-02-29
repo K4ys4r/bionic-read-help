@@ -1,4 +1,12 @@
-# What is Bionic Reading?
+# &lt;wc-bionic-read-help/&gt;
+
+It is a web component written in pure javascript and without any
+dependencies. <br />
+It helps to read better, faster and more focused based on the **Bionic Reading method**
+
+[![npm version](https://badgen.net/npm/v/@k4ys4r/wc-bionic-read-help)](https://www.npmjs.com/package/@k4ys4r/wc-bionic-read-help)
+
+## What is Bionic Reading?
 
 Bionic reading is a new method for reading better, faster and more
 focused.<br />
@@ -7,15 +15,38 @@ It aims to highlight text when an artificial fixation points are used to guid ey
 It is very helpful for people with dyslexia while their reading and
 learning process.
 
-## Bionic Read Help Web Component
+## Installation
 
-It is a web component written in pure javascript and without any
-dependencies. <br />
-It is extended from HTML element. It can be used like below:
+```bash
+# with npm
+npm i @k4ys4r/wc-bionic-read-help
+
+#with yarn
+yarn add @k4ys4r/wc-bionic-read-help
+```
+
+Once installed, import it in your application:
+
+```js
+import "@k4ys4r/wc-bionic-read-help";
+
+//To get access to the Class properties
+import BionicReadHelp from "@k4ys4r/wc-bionic-read-help";
+BionicReadHelp.tagName;
+BionicReadHelp.attributes;
+```
+
+## Usage
+
+1. Make sure you've add `wc-bionic-read-help` to your app through NPM. See [Installation](#installation) for more details.
+2. Add `wc-bionic-read-help` to your app and placed it at the top.
+3. Then it can be used like below:
 
 ```html
 <wc-bionic-read-help>...</wc-bionic-read-help>
 ```
+
+### Usage of `<wc-bionic-read-help/>` attributes
 
 There is four additional attributes that can be used to adjust the opacity, the algorithm, the text color and the bionic mode type:
 
@@ -62,17 +93,24 @@ Word with length of :
 
 For more information and to experiment bionic reding with your own text [go here](https://k4ys4r.github.io/bionic-read-help/).
 
-## For Developper
+### Example
 
-Get a copy of the project.
+- [Usage with React][wc-bionic-read-help-react]
+- [Usage with Vue 3][wc-bionic-read-help-vue]
+- [Or try it here][home-page]
 
-```bash
-# go to the project folder
-# with yarn
-yarn
-yarn run dev
+[wc-bionic-read-help-react]: https://stackblitz.com/edit/wc-bionic-read-help-reactjs?file=src%2FApp.jsx
+[wc-bionic-read-help-vue]: https://stackblitz.com/edit/wc-bionic-read-help-vuejs?file=src%2FApp.vue
+[home-page]: https://k4ys4r.github.io/bionic-read-help/
 
-# with npm
-npm i
-npm run dev
-```
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request 😊
+
+## License
+
+[MIT License](LICENSE)
